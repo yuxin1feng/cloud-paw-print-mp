@@ -1,0 +1,14 @@
+# Java
+/target/
+*.log
+
+# IDE
+.idea/
+*.iml
+
+# Node / Miniprogram
+node_modules/
+dist/
+
+# OS
+.DS_Store
