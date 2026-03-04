@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="title">云爪印 Demo</view>
+
+    <button bindtap="checkStatus">检测后端状态</button>
+    <button bindtap="login">模拟登录</button>
+
+    <view class="result">{{result}}</view>
+  </view>
+</scroll-view>
