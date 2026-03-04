@@ -23,3 +23,7 @@ page {
   margin-top: 40rpx;
   word-break: break-all;
 }
+
+.scrollarea {
+  padding-bottom: 200rpx;
+}

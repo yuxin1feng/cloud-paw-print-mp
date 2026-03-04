@@ -1,12 +1,16 @@
 <!--index.wxml-->
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
+
+<image src="{{item.media_url.startsWith('http') ? item.media_url : item.media_url}}" mode="widthFix" />
+
   <view class="container">
-    <view class="title">云爪印 Demo</view>
-
-    <button bindtap="checkStatus">检测后端状态</button>
-    <button bindtap="login">模拟登录</button>
-
-    <view class="result">{{result}}</view>
+    <button bindtap="createDummyPost">发一条示例帖子</button>
+    <view wx:for="{{posts}}" wx:key="id" class="post">
+      <text>{{item.pet_name}} - {{item.caption}}</text>
+      <image src="{{item.media_url}}" mode="widthFix" style="width:300px;height:auto;" />
+      <view>点赞: {{item.like_count}}</view>
+      <button data-id="{{item.id}}" bindtap="onLike">点赞</button>
+    </view>
   </view>
 </scroll-view>
